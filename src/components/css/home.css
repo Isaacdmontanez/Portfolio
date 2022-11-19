@@ -1,0 +1,74 @@
+#homeDiv{
+    position: fixed;
+    top: 7vh;
+    bottom: 0vh;
+    left: 0vh;
+    right: 0vh;
+    user-select: text !important;
+    background-color: rgb(236, 236, 239);
+}
+
+/*Text*/
+
+#homeInnerDisplay{
+    text-align: center;
+    padding-top: 13vh;
+}
+#homeHiText{
+    font-size: 8vh;
+    font-weight: bold;
+}
+#homeMainText{
+    font-size: 3.75vh;
+    padding-top: 5vh;
+    padding-left: 20vw;
+    padding-right: 20vw;
+}
+
+/*Links*/
+
+#homeLinksBox{
+    position: fixed;
+    top: 70vh;
+    left: 5vw;
+    width: 45vw;
+    height: 30vh;
+    text-align: center;
+    font-size: 3.75vh;
+}
+#homeDocumentationBox{
+    position: fixed;
+    top: 70vh;
+    right: 5vw;
+    width: 45vw;
+    height: 30vh;
+    text-align: center;
+    font-size: 3.75vh;
+}
+.homeLinkText{
+    color: black;
+    padding-top: 5vh;
+    margin-bottom: 2.5vh;
+}
+.homeLinks{
+    color: darkgreen;
+    padding: 2vh;
+}
+.homeDocumentation{
+    color: rgb(5, 3, 69);
+    padding: 2vh;
+}
+.homeLinks:hover{
+    color: darkgreen;
+    font-weight: bold;
+    text-decoration: none;
+}
+.homeDocumentation:hover{
+    color: rgb(5, 3, 69);
+    font-weight: bold;
+    text-decoration: none;
+}
+.homeLinks:focus{
+    outline: none;
+    box-shadow: none;
+}

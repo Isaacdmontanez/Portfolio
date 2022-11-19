@@ -1,0 +1,56 @@
+.sortAlgoBar{
+    background-color: rgb(5, 3, 69);
+}
+#sortingPageDiv{
+    position: fixed;
+    top: 7vh;
+    bottom: 0vh;
+    left: 0vh;
+    right: 0vh;
+    background-color: rgb(235, 235, 235);
+}
+.sortAlgoBar ul {
+    list-style-type: none;
+    padding: 0px 0px;
+    background-color: rgb(5, 3, 69);
+    margin-bottom: 1vh;
+    border-bottom: 0.1vh solid black;
+    border-top: 0.1vh solid black;
+    font-size: 2vh;
+    height: 6vh;
+}
+
+.sortAlgoBar li{
+    display: inline-block;
+    padding: 0;
+    height: 100%;
+    width: auto;
+    margin: 0;
+}
+
+.sortAlgoBar input[type="button"]{
+    color: rgb(253, 255, 253);
+    background-color: rgb(5, 3, 69);
+    height: 100%;
+    width: 100%;
+    border: 0;
+    vertical-align: middle;
+    font-weight: bold;
+}
+
+.sortAlgoBar input[type="button"]:hover{
+    color: rgb(181, 26, 26);
+}
+
+.displayLine{
+    background-color: rgb(20, 120, 221);
+    width: 4px;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.barContainer{
+    text-align: center;
+}

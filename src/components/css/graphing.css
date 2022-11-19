@@ -1,0 +1,215 @@
+/*ALGOBAR*/
+
+.algoBar ul {
+    list-style-type: none;
+    padding: 0px 0px;
+    background-color: rgb(5, 3, 69);
+    border-bottom: 0.1vh solid black;
+    border-top: 0.1vh solid black;
+    height: 6vh;
+    width: 100%;
+    font-size: 2vh;
+    margin-bottom: 2vh;
+}
+.algoBar li{
+    float: left;
+    display: block;
+    width: auto;
+    height: 100%;
+}
+#graphHelpButton{
+    float: right;
+    display: block;
+    width: auto;
+    text-align: center;
+    padding: 1.25vh 1.5vw;
+}
+.algoBar input[type="button"]{
+    color: rgb(253, 255, 253);
+    background-color: rgb(5, 3, 69);
+    height: 100%;
+    width: 100%;
+    border: 0;
+    font-weight: bold;
+}
+.algoBar input[type="button"]:hover{
+    color: rgb(181, 26, 26);
+}
+#dividerButton{
+    pointer-events: none;
+}
+
+/*HELP MODAL*/
+
+#graphHelpModal{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.20);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5vh;
+}
+#graphHelpModal-hidden{
+    display: none;
+}
+.graphModalContent{
+    position: static;
+    background-color: rgb(245, 247, 245);
+    padding: 3%;
+}
+.graphModalContent p{
+    padding: 1.5vh;
+    margin: 0;
+}
+.modalCubeDisplay{
+    display: inline-block;
+    height: 2.1vh;
+    width: 2.1vh;
+    border: 0.15vh solid black;
+}
+.boldFontInGraphHelpModal{
+    font-weight: bold;
+}
+#modalNegativeCube{
+    background-color: lightseagreen;
+}
+#modalLightCube{
+    background-color: yellow;
+}
+#modalHeavyCube{
+    background-color: orange;
+}
+
+/*RADIO BUTTONS*/
+
+#graphRadioButtons{
+    font-size: 1.9vh !important;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 5vh;
+}
+.labelGraphRadio{
+    margin-left: 1.2vh;
+    margin-right: 0.3vh;
+}
+.graphRadioInput{
+    box-sizing: border-box;
+    appearance: none;
+    background-color: white;
+    outline: 0.15vh solid black;
+    width: 1.4vh;
+    height: 1.4vh;
+}
+
+/*RADIO BUTTON COLORS*/
+
+#removeGraphRadio:checked{
+    background-color: brown;
+}
+#startGraphRadio:checked{
+    background-color: green;
+}
+#endGraphRadio:checked{
+    background-color: blue;
+}
+#wallGraphRadio:checked{
+    background-color: black;
+}
+#negativeWeightGraphRadio:checked{
+    background-color: lightblue;
+}
+#lightWeightGraphRadio:checked{
+    background-color: yellow;
+}
+#heavyWeightGraphRadio:checked{
+    background-color: orange;
+}
+#kruskalRadio:checked{
+    background-color: lightseagreen;
+}
+
+/*GRID*/
+
+.gridButtons{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+    padding: 0px;
+    justify-content: center;
+}
+.cube {
+    border: 1px solid black;
+    width: 30px;
+    height: 25px;
+    background-color: rgb(230, 235, 230);
+ }
+.cube:focus{
+    outline: none;
+    box-shadow: none;
+}
+
+/*CUBE COLORS*/
+
+.cube:hover{
+    background-color:rgb(255, 0, 0) !important;
+}
+button[name *= "defaultCube"] {
+    background-color: rgb(253, 255, 253);
+}
+button[name *= "startCube"] {
+    background-color: green;
+}
+button[name *= "endCube"] {
+    background-color: blue;
+}
+button[name *= "wallCube"] {
+    background-color: black;
+}
+button[name *= "negativeWeightCube"] {
+    background-color: lightblue;
+}
+button[name *= "lightWeightCube"] {
+    background-color: yellow;
+}
+button[name *= "heavyWeightCube"] {
+    background-color: orange;
+}
+button[name *= "kruskalCube"] {
+    background-color: lightseagreen;
+}
+button[name *= "-path"] {
+    background-color: lime !important;
+}
+button[name *= "-double"] {
+    background-color: darkgreen !important;
+}
+button[name *= "-visited"]{
+    background-color: purple !important;
+}
+button[name *= "-queue"]{
+    background-color: lightpink !important;
+}
+button[name *= "-cycle"]{
+    background-color: red !important;
+}
+
+/*ERROR MODALS*/
+
+#graphingErrorModal{
+    position: fixed;
+    top: 19vh;
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+    font-size: 2vh;
+    color: red;
+    text-align: center;
+}

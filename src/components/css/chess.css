@@ -1,0 +1,390 @@
+body{
+    user-select: none;
+}
+
+/*Chess Board*/
+
+#chessBoard{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 4vh;
+    margin-left: 10vh;
+    height: 83vh;
+    width: 83vh;
+    border: 0.6vh solid black;
+}
+.chessTile{
+    width: 12.5%;
+    height: 12.5%;
+    border: 0px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.chessTile:focus{
+    outline: none;
+    box-shadow: none;
+}
+.chessTile[name *= "-isUser"]{
+    cursor: grab;
+}
+.chessTile[name = "emptyTile"]{
+    cursor: revert;
+}
+.chessTile[name *= "-isAi"]{
+    cursor: revert;
+}
+
+/*Piece Images*/
+
+.chessTile[name *= "whitePawn"]{
+    background-image: url('../images/whitePawn.png');
+}
+.chessTile[name *= "whiteRook"]{
+    background-image: url('../images/whiteRook.png');
+}
+.chessTile[name *= "whiteKnight"]{
+    background-image: url('../images/whiteKnight.png');
+}
+.chessTile[name *= "whiteBishop"]{
+    background-image: url('../images/whiteBishop.png');
+}
+.chessTile[name *= "whiteQueen"]{
+    background-image: url('../images/whiteQueen.png');
+}
+.chessTile[name *= "whiteKing"]{
+    background-image: url('../images/whiteKing.png');
+}
+.chessTile[name *= "blackPawn"]{
+    background-image: url('../images/blackPawn.png');
+}
+.chessTile[name *= "blackRook"]{
+    background-image: url('../images/blackRook.png');
+}
+.chessTile[name *= "blackKnight"]{
+    background-image: url('../images/blackKnight.png');
+}
+.chessTile[name *= "blackBishop"]{
+    background-image: url('../images/blackBishop.png');
+}
+.chessTile[name *= "blackQueen"]{
+    background-image: url('../images/blackQueen.png');
+}
+.chessTile[name *= "blackKing"]{
+    background-image: url('../images/blackKing.png');
+}
+
+/*Pawn Upgrade Buttons*/
+#pawnUpgradeModal-visible{
+    background-color: rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 11vh;
+    bottom: 6vh;
+    left: 10vh;
+    width: 83vh;
+}
+#pawnUpgradeModal-hidden{
+    display: none !important;
+}
+#pawnUpgradeList{
+    position: fixed;
+    top: 11.6vh;
+    width: 10.3vh;
+    height: 10.3vh;
+    display: inline-block;
+    font-size: 0;
+}
+#pawnUpgradeList button{
+    margin: 0;
+    padding: 0;
+}
+.pawnUpgradeButtons{
+    width: 5.1vh;
+    height: 5.1vh;
+    margin: 0;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0);
+    border: 0;
+}
+.pawnUpgradeButtons:hover{
+    background-color: rgb(232, 231, 231);
+}
+
+.pawnUpgradeButtons:focus{
+    outline: none;
+    box-shadow: none;
+}
+
+/*Pawn Upgrade Background Images*/
+
+#whitePawnToQueenButton{
+    background-image: url('../images/whiteQueen.png');
+}
+#whitePawnToRookButton{
+    background-image: url('../images/whiteRook.png');
+}
+#whitePawnToKnightButton{
+    background-image: url('../images/whiteKnight.png');
+}
+#whitePawnToBishopButton{
+    background-image: url('../images/whiteBishop.png');
+}
+#blackPawnToQueenButton{
+    background-image: url('../images/blackQueen.png');
+}
+#blackPawnToRookButton{
+    background-image: url('../images/blackRook.png');
+}
+#blackPawnToKnightButton{
+    background-image: url('../images/blackKnight.png');
+}
+#blackPawnToBishopButton{
+    background-image: url('../images/blackBishop.png');
+}
+
+/*End Game Modal*/
+
+#isUserWins-hidden{
+    display: none !important;
+}
+#isUserWins-visible{
+    background-color: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 11vh;
+    bottom: 6vh;
+    left: 10vh;
+    width: 83vh;
+    user-select: none;
+    color:rgb(0, 224, 19);
+    font-size: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+#isAiWins-hidden{
+    display: none !important;
+}
+#isAiWins-visible{
+    background-color: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 11vh;
+    bottom: 6vh;
+    left: 10vh;
+    width: 83vh;
+    user-select: none;
+    color:rgb(182, 11, 11);
+    font-size: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+#stalemate-hidden{
+    display: none !important;
+}
+#stalemate-visible{
+    background-color: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 11vh;
+    bottom: 6vh;
+    left: 10vh;
+    width: 83vh;
+    user-select: none;
+    color:orange;
+    font-size: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+#gameOverModal{
+    position: fixed;
+    top: 11vh;
+    bottom: 6vh;
+    left: 10vh;
+    width: 83vh;
+    opacity: 0;
+    cursor: revert;
+}
+
+/*Strength Of Game Display*/
+#chessGameStrengthContainer{
+    position: absolute;
+    top: 11vh;
+    bottom: 6vh;
+    left: 3vh;
+    width: 4vh;
+    border: 0.6vh solid darkgreen;
+    color: black;
+    margin: 0;
+}
+#chessGameStrengthLine{
+    position: absolute;
+    bottom: 8.5vh;
+    left: 3.6vh;
+    width: 2.81vh;
+    background-color: lightgray;
+    border: 0;
+    margin: 0;
+}
+#chessGameStrengthScore{
+    position: absolute;
+    left: 3vh;
+    bottom: 6vh;
+    height: 2.7vh;
+    width: 4vh;
+    font-size: 1.5vh;
+    padding: 0;
+    margin: 0;
+    padding-left: 0.1vh;
+    font-weight: bold;
+    color: lightgray;
+    background-color: darkgreen;
+    text-align: center;
+}
+
+/*Move Dashboard*/
+
+#chessPastMoveDashBoard{
+    position: fixed;
+    display: flex;
+    background-size: cover;
+    top: 11vh;
+    bottom: 6vh;
+    left: 105vh;
+    width: 50vh;
+    color: lightgray;
+    background-color: darkgreen;
+    border: 0.6vh solid black;
+}
+#chessPastMovesHeadding{
+    display: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    font-size:  4vh;
+    font-weight: bold;
+}
+
+/*Past Moves Buttons*/
+
+#chessPastMoveContainer{
+    overflow-y: scroll;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    background-color: lightgray;
+    border: 0.2vh solid black;
+    position: fixed;
+    top: 19vh;
+    height: 55vh;
+    left: 110vh;
+    width: 40vh;
+}
+.chessPastMovesButton{
+    color: black;
+    text-align: left;
+    font-size: 1.5vh;
+    padding: 0;
+    padding-left: 0.1vh;
+    margin: 0;
+    height: 3vh;
+    width: 9.347vh;
+    border: none;
+}
+.chessPastMovesButton:hover{
+    font-weight: bold;
+}
+.chessPastMovesButton:focus{
+    outline: none;
+    box-shadow: none;
+}
+
+/*Confirm Board Change Modal*/
+
+#chessBoardChangeModal-Hidden{
+    display: none !important;
+}
+#chessBoardChangeModal-Visible{
+    background-color: rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 11vh;
+    bottom: 6vh;
+    left: 10vh;
+    width: 83vh;
+    user-select: none;
+    color:black;
+    font-size: 4vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+#chessBoardChangeInnerModal{
+    position: fixed;
+    top: 45.75vh;
+    width: 50vh;
+    background-color: rgb(255, 255, 255, 0.5);
+}
+#chessBoardChangeText{
+    text-align: center;
+}
+.chessBoardChangeButton{
+    border: 0;
+    background-color: rgba(162, 154, 215, 0);
+    font-size: 4vh;
+    width: 25vh;
+    font-weight: bold;
+}
+.chessBoardChangeButton:focus{
+    outline: none;
+    box-shadow: none;
+}
+.chessBoardChangeButton:hover{
+    color: rgb(181, 26, 26);
+}
+
+/*New Game and Undo Button*/
+
+.chessControlButtons{
+    background-color: rgb(5, 3, 69);
+    color: rgb(253, 255, 253);
+    position:fixed;
+    left: 115vh;
+    width: 30vh;
+    height: 6vh;
+    font-size: 3vh;
+    border: 0.2vh solid black;
+    text-decoration: none;
+}
+.chessControlButtons:focus{
+    outline: none;
+    box-shadow: none;
+}
+.chessControlButtons:hover{
+    color: rgb(181, 26, 26);
+}
+#chessUndoButton{
+    top: 77vh;
+}
+#chessNewGameButton{
+    top: 85vh;
+}
+
+/*Killed Pieces Display*/
+
+#chessKilledPiecesDisplay{
+    position: fixed;
+    background-color: lightgray;
+    border-bottom: 0.6vh solid black;
+    border-top: 0.6vh solid black;
+    top: 11vh;
+    height: 83vh;
+    left: 93vh;
+    width: 12vh;
+}
