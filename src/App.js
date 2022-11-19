@@ -8,7 +8,7 @@ import './components/css/navBar.css'
 
 export default function App () {
   return (
-    <HashRouter>
+    <HashRouter basename="/portfolio">
       <nav className = 'navBar'>
         <Link to = "/" id = "link">Home</Link>
         <Link to = "/chess" id = "link">Chess</Link>
