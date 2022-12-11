@@ -1,5 +1,5 @@
 import React from 'react';
-import {HashRouter, Route, Routes, Link } from 'react-router-dom';
+import {BrowserRouter, Route, Routes, Link } from 'react-router-dom';
 import Graphing from './components/webpages/graphing';
 import Sorting from './components/webpages/sorting';
 import Chess from './components/webpages/chessBoard';
@@ -8,7 +8,7 @@ import './components/css/navBar.css'
 
 export default function App () {
   return (
-    <HashRouter basename="/portfolio">
+    <BrowserRouter>
       <nav className = 'navBar'>
         <Link to = "/" id = "link">Home</Link>
         <Link to = "/chess" id = "link">Chess</Link>
@@ -21,6 +21,6 @@ export default function App () {
         <Route path = "/graphing" element = {<Graphing/>}/>
         <Route path = "/sorting" element = {<Sorting/>}/>
       </Routes>
-    </HashRouter>
+    </BrowserRouter>
   );
 };

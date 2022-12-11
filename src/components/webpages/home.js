@@ -5,12 +5,12 @@ import graphingDocumentation from '../text/graphingDocumentation.pdf'
 import chessDocumentation from '../text/chessDocumentation.pdf'
 
 export default function Home (){
-    let linkedInUrl = "https://www.linkedin.com/in/isaac-montanez/", gitHubUrl = "https://github.com/Isaacdmontanez/Portfolio";
+    let linkedInUrl = "https://www.linkedin.com/in/isaacdmontanez/", gitHubUrl = "https://github.com/Isaacdmontanez/Portfolio";
     return(
         <div id = "homeDiv">
             <div id = "homeInnerDisplay">
                 <p className = "homeIntro" id = "homeHiText">Hi, I'm Isaac!</p>
-                <p className = "homeIntro" id = "homeMainText">I'm a software engineer and I love to code. This website showcases some of my favorite personal projects. Please note this website is not designed to work on mobile devices. </p>
+                <p className = "homeIntro" id = "homeMainText">This website showcases some of my favorite personal projects. I built everything here using Javascript, React, and CSS without APIs, libraries, outside code, or help. This website is not designed to work on mobile devices. </p>
             </div>    
             <div id = "homeLinksBox">
                 <p className = "homeLinkText">View My:</p>
