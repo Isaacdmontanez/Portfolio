@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.ba12640b.css",
+    "main.js": "/portfolio/static/js/main.45e1ab6e.js",
+    "static/media/writingSample.pdf": "/portfolio/static/media/writingSample.43f08c93e4f10105b137.pdf",
+    "static/media/chessDocumentation.pdf": "/portfolio/static/media/chessDocumentation.9f851cc817f4e69f50da.pdf",
+    "static/media/sortingDocumentation.pdf": "/portfolio/static/media/sortingDocumentation.917ce2bc93834880c7a3.pdf",
+    "static/media/graphingDocumentation.pdf": "/portfolio/static/media/graphingDocumentation.eebdd3a28f7b3f30aefb.pdf",
+    "index.html": "/portfolio/index.html",
+    "main.ba12640b.css.map": "/portfolio/static/css/main.ba12640b.css.map",
+    "main.45e1ab6e.js.map": "/portfolio/static/js/main.45e1ab6e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ba12640b.css",
+    "static/js/main.45e1ab6e.js"
+  ]
+}
