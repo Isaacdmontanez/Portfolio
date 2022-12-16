@@ -10,7 +10,7 @@ State changes can occur when the player moves a piece, upgrades a pawn, changes 
 
 The board displays the current game state and allows the user to move pieces. After the player moves a piece, the board checks if the move is legal, checks if the move causes a Pawn promotion, checks if the game is over, updates the past move dashboard, updates the killed piece display, and calls the chess engine. The Pawn promotion pauses the game until the user makes a selection. The end-game modal stops the user from making moves on the board. <br />
 
-The past move dashboard displays past moves and allows the user to change the board state to any previous state. The data used here updates when the board state changes. The board state will temporarily change when the user hovers over a previous state. The board state permanently changes with the undo button, new game button, or after the user clicks a previous move and confirms the change on the popup modal. The dashboard will call the engine if the state changes to the Ai's turn.<br />
+The past move dashboard displays past moves and allows the user to change the board state to any previous state. The data used here is collected when the board state changes. The board state will temporarily change when the user hovers over a previous state. The board state permanently changes with the undo button, new game button, or after the user clicks a previous move and confirms the change on the popup modal. The dashboard will call the engine if the state changes to the Ai's turn.<br />
 
 The killed piece display counts the number of active pieces on the board and displays the missing pieces. <br />
 
