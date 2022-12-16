@@ -1,8 +1,8 @@
 I built this website using Javascript, React, and CSS without APIs, outside code, or help. It includes a single-player Chess game, a graphing algorithm visualizer, and a sorting algorithm visualizer. For an in-depth explanation of each project, please view the documentation at https://isaacdmontanez.github.io/portfolio or in src\components\text. <br/>
 
-<br />##Chess:##<br />
+## Chess:<br />
 
-####Chessboard:####<br />
+#### Chessboard:<br />
 
 This section covers the user interface on the Chess tab. The Chessboard and Chess engine work independently to avoid bugs during future development. This section will cover state changes, the board, the past move dashboard, the killed piece display, and the game strength display (slider on the right). <br />
 
@@ -16,7 +16,7 @@ The killed piece display counts the number of active pieces on the board and dis
 
 The game strength display is the current strength of the game returned by the engine. <br />
 
-####Chess Engine:####<br />
+#### Chess Engine:<br />
 
 The engine uses a minimax algorithm with iterative deepening and alpha-beta pruning. In order words, the engine will start at a depth of one and reevaluate one depth deeper until it runs out of time. The engine restarts the evaluation after each ply (additional depth) and uses the calculations from the previous ply to order the next iteration. When evaluating each ply, the engine assumes each player will act logically. Therefore the engine can prune (exclude) everything except the best moves for each player. A best-case ordered ply evaluates the square root of the worst-case ordered ply's amount of board states. <br />
 
@@ -26,11 +26,11 @@ Zobrist Hashing stores and retrieves the weight of each evaluated board state. <
 
 I use Bitboards and bit operations to increase the speed of the engine. Bitboards use a 10x8 board represented as an 80-bit Bigint for easy evaluation.<br />
 
-<br />##Graphing Visualizer:##<br />
+## Graphing Visualizer:<br />
 
 The graphing visualizer allows the user to build and use five different graphing algorithms. When an algorithm is activated, it runs whenever the graph changes. To use a larger or smaller graph, zoom out or in and refresh the page.<br />
 
-<br />##Sorting Visualizer:##<br />
+## Sorting Visualizer:<br />
 
 The sorting visualizer automatically generates random displays and requires users to select the algorithm they want to run.<br />
 
