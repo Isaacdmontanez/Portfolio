@@ -1,4 +1,4 @@
-I built this website using Javascript, React, and CSS without APIs, outside code, or help. It includes a single-player Chess game, a graphing algorithm visualizer, and a sorting algorithm visualizer. For an in-depth explanation of each project, please view the documentation at https://isaacdmontanez.github.io/portfolio or in src\components\text. <br/>
+I built this website using Javascript, React, CSS, and Node.js without APIs, outside code, or help. It includes a single-player Chess game, a graphing algorithm visualizer, and a sorting algorithm visualizer. For an in-depth explanation of each project, please view the documentation at https://isaacdmontanez.github.io/portfolio or in src\components\text. <br/>
 
 ## Chess:<br />
 
